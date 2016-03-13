@@ -33,10 +33,10 @@ router.post('/', wrap(function* (req, res, next) {
             payload.errors.push('Oops! Something broke. We notified our sleepy devs!');
             return res.json(payload);
         }
-    });
 
     payload.data.user = user;
     res.json(payload);
+    });
 }));
 
 module.exports = router;
